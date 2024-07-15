@@ -65,9 +65,9 @@ const TaxesStep = ({ onNext, onBack }: { onNext: () => void; onBack: () => void 
     !isNaN(Number(cleaningFee));
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col bg-gray-100">
       <Header />
-      <main className="flex-grow flex justify-center px-4 py-16 bg-zinc-200">
+      <main className="flex-grow flex justify-center px-4 py-8 bg-zinc-200">
         <div className="max-w-xl w-full space-y-8 p-8 m-12 h-fit rounded-lg shadow-xl bg-white">
           <div>
             <h2 className="text-center text-3xl font-extrabold text-gray-900 py-4">

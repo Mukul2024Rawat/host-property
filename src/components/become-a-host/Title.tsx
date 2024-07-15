@@ -24,7 +24,7 @@ const TitleStep = ({ onNext, onBack }: { onNext: () => void; onBack: () => void 
   return (
     <div className="bg-zinc-100">
       <Header />
-      <main className="flex-grow flex justify-center px-4 py-16 bg-white">
+      <main className="flex-grow flex justify-center px-4 py-14 bg-white">
         <div className="max-w-xl w-full space-y-8 p-8 m-12  rounded-lg shadow-xl">
           <div>
             <h2 className="text-center text-3xl font-extrabold text-gray-900 py-4">

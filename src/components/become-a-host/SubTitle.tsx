@@ -22,10 +22,10 @@ const SubTitleStep = ({ onNext, onBack }: { onNext: () => void; onBack: () => vo
   const isComplete = subtitle.length > 0;
 
   return (
-    <div>
+    <div className="h-screen">
       <Header />
-      <main className="flex-grow flex justify-center px-4 py-16 bg-zinc-100">
-        <div className="max-w-xl w-full space-y-8 p-8 m-12 h-fit rounded-lg shadow-xl bg-white">
+      <main className="flex-grow flex justify-center px-4 py-12 bg-zinc-100">
+        <div className="max-w-xl w-full space-y-8 p-8 m-12  rounded-lg shadow-xl bg-white">
           <div>
             <h2 className="text-center text-3xl font-extrabold text-gray-900 py-4">
               Now let&#39;s give your property a subtitle

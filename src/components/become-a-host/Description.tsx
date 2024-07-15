@@ -38,11 +38,13 @@ const DescriptionStep = ({ onNext, onBack }: { onNext: () => void; onBack: () =>
             <textarea
               name="description"
               id="property-description"
-              className="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-lg border-solid border-black rounded-md p-4"
+              className="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-lg border-solid border-gray-300 rounded-md p-4"
               placeholder="You'll have a great time at this comfortable place to stay."
               value={description}
               onChange={handleTextareaChange}
-              rows={6}
+              rows={8}
+              maxLength={500}
+              style={{ resize: 'none' }}
             />
             <p className="mt-1 text-right text-sm text-gray-500">{description.length}/500</p>
           </div>

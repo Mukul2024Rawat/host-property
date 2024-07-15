@@ -17,17 +17,16 @@ const PriceStep = ({ onNext, onBack }: { onNext: () => void; onBack: () => void 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newPrice = event.target.value;
 
-    // Validate if the input is a valid number and within the range of 0 to 100
-    if (!isNaN(parseFloat(newPrice)) && parseFloat(newPrice) >= 0 && parseFloat(newPrice) <= 100) {
+
       setPriceState(newPrice);
       dispatch(setPrice({ ...priceFromState, price: parseFloat(newPrice) }));
-    }
+
   };
 
   const isComplete = price !== "" && parseFloat(price) > 0;
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col bg-gray-100">
       <Header />
       <main className="flex-grow flex justify-center px-4 py-16 bg-zinc-200">
         <div className="max-w-xl w-full space-y-8 p-8 m-12 h-fit rounded-lg shadow-xl bg-white">
@@ -41,7 +40,7 @@ const PriceStep = ({ onNext, onBack }: { onNext: () => void; onBack: () => void 
           </div>
           <div>
             <label htmlFor="property-price" className="block text-sm font-medium text-gray-700">
-              Price per night (in percent, max 100)
+              Price per night
             </label>
             <input
               type="number"
@@ -51,9 +50,7 @@ const PriceStep = ({ onNext, onBack }: { onNext: () => void; onBack: () => void 
               placeholder="Enter your price"
               value={price}
               onChange={handleInputChange}
-              min="0"
-              max="100"
-              step="0.01"
+              step="1.00"
             />
           </div>
         </div>

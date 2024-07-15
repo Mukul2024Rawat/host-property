@@ -22,12 +22,15 @@ const UserMenu: React.FC<UserMenuProps> = ({
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
-
+  const handleClick = () => {
+    onRent();
+    router.push('/become-a-host');
+  };
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
         <div
-          onClick={onRent}
+          onClick={handleClick}
           className="md:block text-white text-sm font-semibold py-3 px-4 rounded-full hover:bg-gray-800 transition cursor-pointer lg:flex items-center gap-4"
         >
           <p>Become a Host</p>
